@@ -1,16 +1,19 @@
 <template>
-    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-        <div class="fixed top-0 right-0 px-6 py-4 sm:block">
-            <inertia-link href="/food-menu" class="text-sm text-gray-700 underline mr-2">
-                Food Menu
-            </inertia-link>
-            <inertia-link href="/logout" method="post" as="button" type="button" class="text-sm text-gray-700 underline mr-2">
-                Logout
-            </inertia-link>
+    <div>
+        <div class="relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0 z-10">
+            <div class="fixed top-0 right-0 px-6 py-4 sm:block">
+                <inertia-link href="/food-menu" class="text-md text-gray-700 underline mr-2">
+                    Food Menu
+                </inertia-link>
+                <inertia-link href="/logout" method="post" as="button" type="button" class="text-md text-gray-700 underline mr-2 focus:outline-none">
+                    Logout
+                </inertia-link>
+            </div>
+            <h1 class="text-white 2xl:text-xl">
+                Stuart and Jennifer Creed Wedding
+            </h1>
         </div>
-        <div class="text-white">
-            Stuart and Jennifer Creed Wedding
-        </div>
+        <img src="photos/three-cliffs.jpeg" class="w-full h-full absolute left-0 top-0 z-0">
     </div>
 </template>
 
@@ -79,12 +82,8 @@
 </style>
 
 <script>
+    // background photo: https://www.farawaylucy.com/weekend-in-the-gower/
     export default {
-        methods: {
-            logout() {
-                console.log('invoked')
-                this.$inertia.post(route('logout'))
-            }
-        }
+        name: "Main"
     }
 </script>
