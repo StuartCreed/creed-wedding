@@ -17,7 +17,8 @@ mix.js('resources/js/app.js', 'public/js').vue()
         require('tailwindcss'),
         require('autoprefixer'),
     ])
-    .webpackConfig(require('./webpack.config'));
+    .webpackConfig(require('./webpack.config'))
+    .browserSync('http://creed-wedding.docksal:8080/')
 
 if (mix.inProduction()) {
     mix.version();

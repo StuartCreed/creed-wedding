@@ -1,24 +1,16 @@
 <template>
     <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-        <div v-if="canLogin" class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
-            <inertia-link v-if="$page.props.user" href="/dashboard" class="text-sm text-gray-700 underline">
-                Dashboard
+        <div class="fixed top-0 right-0 px-6 py-4 sm:block">
+            <inertia-link href="/food-menu" class="text-sm text-gray-700 underline mr-2">
+                Food Menu
             </inertia-link>
-
-            <template v-else>
-                <inertia-link :href="route('login')" class="text-sm text-gray-700 underline">
-                    Login
-                </inertia-link>
-
-                <inertia-link v-if="canRegister" :href="route('register')" class="ml-4 text-sm text-gray-700 underline">
-                    Register
-                </inertia-link>
-            </template>
+            <inertia-link href="/logout" method="post" as="button" type="button" class="text-sm text-gray-700 underline mr-2">
+                Logout
+            </inertia-link>
         </div>
         <div class="text-white">
             Stuart and Jennifer Creed Wedding
         </div>
-
     </div>
 </template>
 
@@ -88,11 +80,11 @@
 
 <script>
     export default {
-        props: {
-            canLogin: Boolean,
-            canRegister: Boolean,
-            laravelVersion: String,
-            phpVersion: String,
+        methods: {
+            logout() {
+                console.log('invoked')
+                this.$inertia.post(route('logout'))
+            }
         }
     }
 </script>
