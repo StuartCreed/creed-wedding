@@ -13,7 +13,6 @@
                 Stuart and Jennifer Creed Wedding
             </h1>
         </div>
-        <img src="photos/three-cliffs.jpeg" class="w-full h-full absolute left-0 top-0 z-0">
     </div>
 </template>
 
