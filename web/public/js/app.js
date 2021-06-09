@@ -3386,8 +3386,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
 
 
 
@@ -32198,8 +32196,6 @@ var render = function() {
               _c(
                 "div",
                 [
-                  _c("jet-label", { attrs: { for: "email", value: "Email" } }),
-                  _vm._v(" "),
                   _c("jet-input", {
                     staticClass: "mt-1 block w-full hidden",
                     attrs: {
@@ -32224,10 +32220,6 @@ var render = function() {
                 "div",
                 { staticClass: "mt-4" },
                 [
-                  _c("jet-label", {
-                    attrs: { for: "password", value: "Password" }
-                  }),
-                  _vm._v(" "),
                   _c("jet-input", {
                     staticClass: "mt-1 block w-full p-3 outline-none",
                     attrs: {

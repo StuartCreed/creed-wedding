@@ -10,12 +10,10 @@
 
             <form @submit.prevent="submit">
                 <div>
-                    <jet-label for="email" value="Email" />
                     <jet-input id="email" type="email" class="mt-1 block w-full hidden" v-model="form.email" required autofocus />
                 </div>
 
                 <div class="mt-4">
-                    <jet-label for="password" value="Password" />
                     <jet-input id="password" class="mt-1 block w-full p-3 outline-none" v-model="form.password" required autocomplete="current-password" />
                 </div>
 
