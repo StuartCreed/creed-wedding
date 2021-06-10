@@ -3385,6 +3385,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 
 
@@ -32161,8 +32162,162 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "render": () => (/* binding */ render),
 /* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
 /* harmony export */ });
-var render = function () {}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "bg-center bg-no-repeat bg-auto",
+      staticStyle: { "background-image": "url('photos/three-cliffs.jpeg')" }
+    },
+    [
+      _c(
+        "jet-authentication-card",
+        [
+          _c("jet-validation-errors", { staticClass: "mb-4" }),
+          _vm._v(" "),
+          _vm.status
+            ? _c(
+                "div",
+                { staticClass: "mb-4 font-medium text-sm text-green-600" },
+                [
+                  _vm._v(
+                    "\n                " + _vm._s(_vm.status) + "\n            "
+                  )
+                ]
+              )
+            : _vm._e(),
+          _vm._v(" "),
+          _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.submit.apply(null, arguments)
+                }
+              }
+            },
+            [
+              _c(
+                "div",
+                [
+                  _c("jet-input", {
+                    staticClass: "mt-1 block w-full hidden",
+                    attrs: {
+                      id: "email",
+                      type: "email",
+                      required: "",
+                      autofocus: ""
+                    },
+                    model: {
+                      value: _vm.form.email,
+                      callback: function($$v) {
+                        _vm.$set(_vm.form, "email", $$v)
+                      },
+                      expression: "form.email"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "mt-4" },
+                [
+                  _c("jet-input", {
+                    staticClass: "mt-1 block w-full p-3 outline-none",
+                    attrs: {
+                      id: "password",
+                      required: "",
+                      autocomplete: "current-password"
+                    },
+                    model: {
+                      value: _vm.form.password,
+                      callback: function($$v) {
+                        _vm.$set(_vm.form, "password", $$v)
+                      },
+                      expression: "form.password"
+                    }
+                  })
+                ],
+                1
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "block mt-4" }, [
+                _c(
+                  "label",
+                  { staticClass: "flex items-center hidden" },
+                  [
+                    _c("jet-checkbox", {
+                      attrs: { name: "remember" },
+                      model: {
+                        value: _vm.form.remember,
+                        callback: function($$v) {
+                          _vm.$set(_vm.form, "remember", $$v)
+                        },
+                        expression: "form.remember"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("span", { staticClass: "ml-2 text-sm text-white" }, [
+                      _vm._v("Remember me")
+                    ])
+                  ],
+                  1
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "flex items-center justify-end mt-4" },
+                [
+                  _vm.canResetPassword
+                    ? _c(
+                        "inertia-link",
+                        {
+                          staticClass:
+                            "underline text-sm hidden text-white hover:text-gray-900",
+                          attrs: { href: _vm.route("password.request") }
+                        },
+                        [
+                          _vm._v(
+                            "\n                        Forgot your password?\n                    "
+                          )
+                        ]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _c(
+                    "jet-button",
+                    {
+                      staticClass: "ml-4",
+                      class: { "opacity-25": _vm.form.processing },
+                      attrs: { disabled: _vm.form.processing }
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Login\n                    "
+                      )
+                    ]
+                  )
+                ],
+                1
+              )
+            ]
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
+}
 var staticRenderFns = []
+render._withStripped = true
 
 
 
