@@ -32168,6 +32168,10 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    {
+      staticClass: "bg-center bg-no-repeat bg-auto",
+      staticStyle: { "background-image": "url('photos/three-cliffs.jpeg')" }
+    },
     [
       _c(
         "jet-authentication-card",
@@ -32178,7 +32182,11 @@ var render = function() {
             ? _c(
                 "div",
                 { staticClass: "mb-4 font-medium text-sm text-green-600" },
-                [_vm._v("\n            " + _vm._s(_vm.status) + "\n        ")]
+                [
+                  _vm._v(
+                    "\n                " + _vm._s(_vm.status) + "\n            "
+                  )
+                ]
               )
             : _vm._e(),
           _vm._v(" "),
@@ -32277,7 +32285,7 @@ var render = function() {
                         },
                         [
                           _vm._v(
-                            "\n                    Forgot your password?\n                "
+                            "\n                        Forgot your password?\n                    "
                           )
                         ]
                       )
@@ -32290,7 +32298,11 @@ var render = function() {
                       class: { "opacity-25": _vm.form.processing },
                       attrs: { disabled: _vm.form.processing }
                     },
-                    [_vm._v("\n                    Login\n                ")]
+                    [
+                      _vm._v(
+                        "\n                        Login\n                    "
+                      )
+                    ]
                   )
                 ],
                 1
@@ -32299,12 +32311,7 @@ var render = function() {
           )
         ],
         1
-      ),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "w-full h-full absolute left-0 top-0 z-0",
-        attrs: { src: "photos/three-cliffs.jpeg" }
-      })
+      )
     ],
     1
   )
