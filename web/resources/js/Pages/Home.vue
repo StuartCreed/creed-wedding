@@ -1,18 +1,6 @@
 <template>
     <div>
-        <div class="relative flex items-top justify-center min-h-screen sm:items-center sm:pt-0 z-10">
-            <div class="fixed top-0 right-0 px-6 py-4 sm:block">
-                <inertia-link href="/food-menu" class="text-md text-gray-700 underline mr-2">
-                    Food Menu
-                </inertia-link>
-                <inertia-link href="/logout" method="post" as="button" type="button" class="text-md text-gray-700 underline mr-2 focus:outline-none">
-                    Logout
-                </inertia-link>
-            </div>
-            <h1 class="text-white 2xl:text-xl">
-                Stuart and Jennifer Creed Wedding
-            </h1>
-        </div>
+        <MainLayout>Home</MainLayout>
     </div>
 </template>
 
@@ -81,8 +69,9 @@
 </style>
 
 <script>
-    // background photo: https://www.farawaylucy.com/weekend-in-the-gower/
+    import MainLayout from "@/Layouts/MainLayout";
     export default {
-        name: "Main"
+        name: "Home",
+        components: {MainLayout}
     }
 </script>

@@ -15,6 +15,37 @@ use Inertia\Inertia;
 |
 */
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/', function () {
-    return Inertia::render('Dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+
+    Route::fallback(function () {
+        return (Inertia::render('Home'));
+    })->name('home');
+
+    Route::get('/venue', function () {
+        return (Inertia::render('Venue'));
+    })->name('venue');
+
+    Route::get('/accommodation', function () {
+        return Inertia::render('Accommodation');
+    })->name('accommodation');
+
+    Route::get('/on-the-day', function () {
+        return (Inertia::render('OnTheDay'));
+    })->name('on-the-day');
+
+    Route::get('/seating-plan', function () {
+        return (Inertia::render('SeatingPlan'));
+    })->name('seating-plan');
+
+    Route::get('/food', function () {
+        return (Inertia::render('Food'));
+    })->name('food');
+
+    Route::get('/drinks', function () {
+        return (Inertia::render('Drinks'));
+    })->name('drinks');
+
+    Route::get('/upload-your-photos', function () {
+        return (Inertia::render('UploadYourPhotos'));
+    })->name('upload-your-photos');
 });
