@@ -37,13 +37,17 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return (Inertia::render('SeatingPlan'));
     })->name('seating-plan');
 
-    Route::get('/food', function () {
-        return (Inertia::render('Food'));
-    })->name('food');
+    Route::get('/food-and-drinks', function () {
+        return (Inertia::render('FoodAndDrinks'));
+    })->name('food-and-drinks');
 
-    Route::get('/drinks', function () {
-        return (Inertia::render('Drinks'));
-    })->name('drinks');
+    Route::get('/food-and-drinks/create', function () {
+        return (Inertia::render('FoodAndDrinksForm'));
+    })->name('food-and-drinks-create');
+
+    Route::post('/food-and-drinks', function () {
+        return 'Food and drink stored!';
+    })->name('food-and-drinks-store');
 
     Route::get('/upload-your-photos', function () {
         return (Inertia::render('UploadYourPhotos'));

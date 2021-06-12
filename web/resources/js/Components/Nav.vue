@@ -15,11 +15,8 @@
         <inertia-link href="/seating-plan" class="text-md text-gray-700 mr-4">
             Seating plan
         </inertia-link>
-        <inertia-link href="/food" class="text-md text-gray-700 mr-4">
-            Food
-        </inertia-link>
-        <inertia-link href="/drinks" class="text-md text-gray-700 mr-4">
-            Drinks
+        <inertia-link href="/food-and-drinks" class="text-md text-gray-700 mr-4">
+            Food and drinks
         </inertia-link>
         <inertia-link href="/music" class="text-md text-gray-700 mr-4">
             Music
