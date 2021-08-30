@@ -1,11 +1,7 @@
 <template>
-    <jet-authentication-card>
+    <jet-authentication-card class="bg-gradient-to-tr from-blue-200 via-purple-300 to-white">
 
-        <jet-validation-errors class="mb-4" />
-
-        <div v-if="status" class="mb-4 font-medium text-sm text-green-600">
-            {{ status }}
-        </div>
+        <h1 class="text-2xl mb-16 text-center">The Creed Wedding</h1>
 
         <form @submit.prevent="submit">
             <div>
@@ -24,10 +20,6 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <inertia-link v-if="canResetPassword" :href="route('password.request')" class="underline text-sm hidden text-white hover:text-gray-900">
-                    Forgot your password?
-                </inertia-link>
-
                 <jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
                     Login
                 </jet-button>

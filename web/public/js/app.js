@@ -3484,14 +3484,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 
@@ -30681,7 +30673,7 @@ var render = function() {
     "button",
     {
       staticClass:
-        "inline-flex items-center px-4 py-2 bg-gray-800 border border-transparent rounded-md font-semibold text-xs text-white uppercase tracking-widest hover:bg-gray-700 active:bg-gray-900 focus:outline-none focus:border-gray-900 focus:shadow-outline-gray transition ease-in-out duration-150",
+        "inline-flex items-center px-4 py-2 bg-yellow-300 border border-transparent rounded-md text-xl tracking-widest hover:bg-white focus:outline-none transition ease-in-out duration-150",
       attrs: { type: _vm.type }
     },
     [_vm._t("default")],
@@ -33339,16 +33331,11 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "jet-authentication-card",
+    { staticClass: "bg-gradient-to-tr from-blue-200 via-purple-300 to-white" },
     [
-      _c("jet-validation-errors", { staticClass: "mb-4" }),
-      _vm._v(" "),
-      _vm.status
-        ? _c(
-            "div",
-            { staticClass: "mb-4 font-medium text-sm text-green-600" },
-            [_vm._v("\n        " + _vm._s(_vm.status) + "\n    ")]
-          )
-        : _vm._e(),
+      _c("h1", { staticClass: "text-2xl mb-16 text-center" }, [
+        _vm._v("The Creed Wedding")
+      ]),
       _vm._v(" "),
       _c(
         "form",
@@ -33435,22 +33422,6 @@ var render = function() {
             "div",
             { staticClass: "flex items-center justify-end mt-4" },
             [
-              _vm.canResetPassword
-                ? _c(
-                    "inertia-link",
-                    {
-                      staticClass:
-                        "underline text-sm hidden text-white hover:text-gray-900",
-                      attrs: { href: _vm.route("password.request") }
-                    },
-                    [
-                      _vm._v(
-                        "\n                Forgot your password?\n            "
-                      )
-                    ]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
               _c(
                 "jet-button",
                 {
@@ -33465,8 +33436,7 @@ var render = function() {
           )
         ]
       )
-    ],
-    1
+    ]
   )
 }
 var staticRenderFns = []
