@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>Food and Drinks</MainLayout>
+    <MainLayout>food and drinks</MainLayout>
 </template>
 
 <script>

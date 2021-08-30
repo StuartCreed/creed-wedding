@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>On the day</MainLayout>
+    <MainLayout>on the day</MainLayout>
 </template>
 
 <script>

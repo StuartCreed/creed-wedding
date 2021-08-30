@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>Accommodation</MainLayout>
+    <MainLayout>accommodation</MainLayout>
 </template>
 
 <script>

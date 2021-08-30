@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="font-handwriting flex flex-col" style="font-size: 30px">
         <Nav></Nav>
-        <div class="mt-10">
+        <div class="mt-16 p-6">
             <slot></slot>
         </div>
     </div>

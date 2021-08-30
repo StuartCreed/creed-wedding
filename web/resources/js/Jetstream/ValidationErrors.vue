@@ -1,10 +1,7 @@
 <template>
-    <div v-if="hasErrors">
-        <div class="font-medium text-red-600">Whoops! Something went wrong.</div>
-
-        <ul class="mt-3 list-disc list-inside text-sm text-red-600">
-            <li v-for="(error, key) in errors" :key="key">{{ error }}</li>
-        </ul>
+    <div v-if="hasErrors" style="font-size: 35px">
+        <div class="font-medium text-red-600">the passcode you have entered </div>
+        <div class="font-medium text-red-600">is not valid. </div>
     </div>
 </template>
 

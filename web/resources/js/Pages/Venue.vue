@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>Venue</MainLayout>
+    <MainLayout>venue</MainLayout>
 </template>
 
 <script>

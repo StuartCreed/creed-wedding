@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>Music</MainLayout>
+    <MainLayout>music</MainLayout>
 </template>
 
 <script>

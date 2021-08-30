@@ -9,11 +9,9 @@ module.exports = {
     ],
 
     theme: {
-        extend: {
-            fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
-            },
-        },
+        fontFamily: {
+            'handwriting': 'Sacramento'
+        }
     },
 
     variants: {

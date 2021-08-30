@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>Seating Plan</MainLayout>
+    <MainLayout>seating plan</MainLayout>
 </template>
 
 <script>

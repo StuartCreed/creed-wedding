@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>Food and Drinks Form</MainLayout>
+    <MainLayout>food and drinks form</MainLayout>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>Upload your photos</MainLayout>
+    <MainLayout>upload your photos</MainLayout>
 </template>
 
 <script>

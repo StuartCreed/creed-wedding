@@ -1,7 +1,7 @@
 <template>
-    <jet-authentication-card class="bg-gradient-to-tr from-blue-200 via-purple-300 to-white">
+    <jet-authentication-card class="font-handwriting">
 
-        <h1 class="text-2xl mb-16 text-center">The Creed Wedding</h1>
+        <jet-validation-errors class="mb-4" />
 
         <form @submit.prevent="submit">
             <div>
@@ -9,7 +9,7 @@
             </div>
 
             <div class="mt-4">
-                <jet-input id="password" class="mt-1 block w-full p-3 outline-none" v-model="form.password" required autocomplete="current-password" />
+                <jet-input id="password" style="font-size: 70px" class="mt-1 block w-full p-3 outline-none opacity-40 bg-blue-800 text-white" v-model="form.password" required autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">
@@ -20,8 +20,8 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-                <jet-button class="ml-4" :class="{ 'opacity-25': form.processing }" :disabled="form.processing">
-                    Login
+                <jet-button class="ml-4" :class="{ 'opacity-40': form.processing }" :disabled="form.processing">
+                    login
                 </jet-button>
             </div>
         </form>

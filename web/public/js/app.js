@@ -2602,9 +2602,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   computed: {
     errors: function errors() {
@@ -30340,81 +30337,78 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "fixed top-0 right-0 px-6 py-4 sm:block" },
+    {
+      staticClass:
+        "fixed top-0 right-0 px-6 py-4 sm:block opacity-40 bg-blue-800 bg-blue-800 text-white w-full"
+    },
     [
       _c(
         "inertia-link",
-        { staticClass: "text-md text-gray-700 mr-4", attrs: { href: "/home" } },
-        [_vm._v("\n        Home\n    ")]
+        { staticClass: "hover:text-black mr-4", attrs: { href: "/home" } },
+        [_vm._v("\n        home\n    ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "inertia-link",
+        { staticClass: "hover:text-black mr-4", attrs: { href: "/venue" } },
+        [_vm._v("\n        venue\n    ")]
       ),
       _vm._v(" "),
       _c(
         "inertia-link",
         {
-          staticClass: "text-md text-gray-700 mr-4",
-          attrs: { href: "/venue" }
-        },
-        [_vm._v("\n        Venue\n    ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "inertia-link",
-        {
-          staticClass: "text-md text-gray-700 mr-4",
+          staticClass: "hover:text-black mr-4",
           attrs: { href: "/accommodation" }
         },
-        [_vm._v("\n        Accommodation\n    ")]
+        [_vm._v("\n        accommodation\n    ")]
       ),
       _vm._v(" "),
       _c(
         "inertia-link",
         {
-          staticClass: "text-md text-gray-700 mr-4",
+          staticClass: "hover:text-black mr-4",
           attrs: { href: "/on-the-day" }
         },
-        [_vm._v("\n        On the day\n    ")]
+        [_vm._v("\n        on the day\n    ")]
       ),
       _vm._v(" "),
       _c(
         "inertia-link",
         {
-          staticClass: "text-md text-gray-700 mr-4",
+          staticClass: "hover:text-black mr-4",
           attrs: { href: "/seating-plan" }
         },
-        [_vm._v("\n        Seating plan\n    ")]
+        [_vm._v("\n        seating plan\n    ")]
       ),
       _vm._v(" "),
       _c(
         "inertia-link",
         {
-          staticClass: "text-md text-gray-700 mr-4",
+          staticClass: "hover:text-black mr-4",
           attrs: { href: "/food-and-drinks" }
         },
-        [_vm._v("\n        Food and drinks\n    ")]
+        [_vm._v("\n        food and drinks\n    ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "inertia-link",
+        { staticClass: "hover:text-black mr-4", attrs: { href: "/music" } },
+        [_vm._v("\n        music\n    ")]
       ),
       _vm._v(" "),
       _c(
         "inertia-link",
         {
-          staticClass: "text-md text-gray-700 mr-4",
-          attrs: { href: "/music" }
-        },
-        [_vm._v("\n        Music\n    ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "inertia-link",
-        {
-          staticClass: "text-md text-gray-700 mr-4",
+          staticClass: "hover:text-black mr-4",
           attrs: { href: "/upload-your-photos" }
         },
-        [_vm._v("\n        Upload your photos\n    ")]
+        [_vm._v("\n        upload your photos\n    ")]
       ),
       _vm._v(" "),
       _c(
         "inertia-link",
         {
-          staticClass: "text-md text-gray-700 mr-4 focus:outline-none",
+          staticClass: "hover:text-black mr-4 focus:outline-none",
           attrs: {
             href: "/logout",
             method: "post",
@@ -30422,7 +30416,7 @@ var render = function() {
             type: "button"
           }
         },
-        [_vm._v("\n        Logout\n    ")]
+        [_vm._v("\n        logout\n    ")]
       )
     ],
     1
@@ -30673,7 +30667,8 @@ var render = function() {
     "button",
     {
       staticClass:
-        "inline-flex items-center px-4 py-2 bg-yellow-300 border border-transparent rounded-md text-xl tracking-widest hover:bg-white focus:outline-none transition ease-in-out duration-150",
+        "inline-flex items-center px-4 py-2 border border-transparent rounded-md tracking-widest hover:bg-white focus:outline-none transition ease-in-out duration-150",
+      staticStyle: { "font-size": "40px" },
       attrs: { type: _vm.type }
     },
     [_vm._t("default")],
@@ -31515,19 +31510,14 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _vm.hasErrors
-    ? _c("div", [
+    ? _c("div", { staticStyle: { "font-size": "35px" } }, [
         _c("div", { staticClass: "font-medium text-red-600" }, [
-          _vm._v("Whoops! Something went wrong.")
+          _vm._v("the passcode you have entered ")
         ]),
         _vm._v(" "),
-        _c(
-          "ul",
-          { staticClass: "mt-3 list-disc list-inside text-sm text-red-600" },
-          _vm._l(_vm.errors, function(error, key) {
-            return _c("li", { key: key }, [_vm._v(_vm._s(error))])
-          }),
-          0
-        )
+        _c("div", { staticClass: "font-medium text-red-600" }, [
+          _vm._v("is not valid. ")
+        ])
       ])
     : _vm._e()
 }
@@ -32442,10 +32432,14 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
+    {
+      staticClass: "font-handwriting flex flex-col",
+      staticStyle: { "font-size": "30px" }
+    },
     [
       _c("Nav"),
       _vm._v(" "),
-      _c("div", { staticClass: "mt-10" }, [_vm._t("default")], 2)
+      _c("div", { staticClass: "mt-16 p-6" }, [_vm._t("default")], 2)
     ],
     1
   )
@@ -33082,7 +33076,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("MainLayout", [_vm._v("Accommodation")])
+  return _c("MainLayout", [_vm._v("accommodation")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -33331,11 +33325,9 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "jet-authentication-card",
-    { staticClass: "bg-gradient-to-tr from-blue-200 via-purple-300 to-white" },
+    { staticClass: "font-handwriting" },
     [
-      _c("h1", { staticClass: "text-2xl mb-16 text-center" }, [
-        _vm._v("The Creed Wedding")
-      ]),
+      _c("jet-validation-errors", { staticClass: "mb-4" }),
       _vm._v(" "),
       _c(
         "form",
@@ -33376,7 +33368,9 @@ var render = function() {
             { staticClass: "mt-4" },
             [
               _c("jet-input", {
-                staticClass: "mt-1 block w-full p-3 outline-none",
+                staticClass:
+                  "mt-1 block w-full p-3 outline-none opacity-40 bg-blue-800 text-white",
+                staticStyle: { "font-size": "70px" },
                 attrs: {
                   id: "password",
                   required: "",
@@ -33426,17 +33420,18 @@ var render = function() {
                 "jet-button",
                 {
                   staticClass: "ml-4",
-                  class: { "opacity-25": _vm.form.processing },
+                  class: { "opacity-40": _vm.form.processing },
                   attrs: { disabled: _vm.form.processing }
                 },
-                [_vm._v("\n                Login\n            ")]
+                [_vm._v("\n                login\n            ")]
               )
             ],
             1
           )
         ]
       )
-    ]
+    ],
+    1
   )
 }
 var staticRenderFns = []
@@ -33898,7 +33893,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("MainLayout", [_vm._v("Food and Drinks")])
+  return _c("MainLayout", [_vm._v("food and drinks")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -33923,7 +33918,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("MainLayout", [_vm._v("Food and Drinks Form")])
+  return _c("MainLayout", [_vm._v("food and drinks form")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -33948,7 +33943,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [_c("MainLayout", [_vm._v("Home")])], 1)
+  return _c("div", [_c("MainLayout", [_vm._v("home")])], 1)
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -33973,7 +33968,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("MainLayout", [_vm._v("Music")])
+  return _c("MainLayout", [_vm._v("music")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -33998,7 +33993,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("MainLayout", [_vm._v("On the day")])
+  return _c("MainLayout", [_vm._v("on the day")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -35308,7 +35303,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("MainLayout", [_vm._v("Seating Plan")])
+  return _c("MainLayout", [_vm._v("seating plan")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -35333,7 +35328,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("MainLayout", [_vm._v("Upload your photos")])
+  return _c("MainLayout", [_vm._v("upload your photos")])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -35358,7 +35353,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("MainLayout", [_vm._v("Venue")])
+  return _c("MainLayout", [_vm._v("venue")])
 }
 var staticRenderFns = []
 render._withStripped = true
