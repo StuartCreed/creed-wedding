@@ -30973,7 +30973,7 @@ var render = function() {
     "div",
     {
       staticClass:
-        "fixed top-0 right-0 px-6 py-4 sm:block opacity-40 bg-blue-800 bg-blue-800 text-white w-full"
+        "top-0 right-0 px-6 py-4 sm:block opacity-40 bg-blue-800 bg-blue-800 text-white w-full"
     },
     [
       _c(
@@ -34588,7 +34588,7 @@ var render = function() {
     [
       _c(
         "MainLayout",
-        { staticClass: "flex flex-column items-center justify-center p-4" },
+        { staticClass: "flex flex-column items-center justify-center" },
         [
           _c("div", [
             _c("div", [_vm._v("Welcome to our Creed Wedding")]),

@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed top-0 right-0 px-6 py-4 sm:block opacity-40 bg-blue-800 bg-blue-800 text-white w-full">
+    <div class="top-0 right-0 px-6 py-4 sm:block opacity-40 bg-blue-800 bg-blue-800 text-white w-full">
         <inertia-link href="/home" class="hover:text-black mr-4">
             home
         </inertia-link>
