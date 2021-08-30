@@ -3,6 +3,9 @@
         <inertia-link href="/home" class="hover:text-black mr-4">
             home
         </inertia-link>
+        <inertia-link href="/rsvp" class="hover:text-black mr-4">
+            rspv
+        </inertia-link>
         <inertia-link href="/venue" class="hover:text-black mr-4">
             venue
         </inertia-link>

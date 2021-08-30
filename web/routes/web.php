@@ -21,6 +21,10 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return (Inertia::render('Home'));
     })->name('home');
 
+    Route::get('/rsvp', function () {
+        return (Inertia::render('Rsvp'));
+    })->name('rsvp');
+
     Route::get('/venue', function () {
         return (Inertia::render('Venue'));
     })->name('venue');
