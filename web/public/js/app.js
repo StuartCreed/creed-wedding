@@ -4163,6 +4163,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -34010,7 +34013,7 @@ var render = function() {
                 staticStyle: { "font-size": "70px" },
                 attrs: {
                   id: "password",
-                  required: "",
+                  autofocus: "",
                   autocomplete: "current-password"
                 },
                 model: {
@@ -34583,25 +34586,35 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("MainLayout", [
-        _c("div", [_vm._v("Welcome to our Creed Wedding")]),
-        _vm._v(" "),
-        _c("div", [_vm._v("We hope you can make it!")]),
-        _vm._v(" "),
-        _c("div", [_vm._v("Love from Jen and Stuart xx")]),
-        _vm._v(" "),
-        _c(
-          "div",
-          [
-            _c("div", { staticClass: "text-center" }, [_vm._v("Countdown")]),
+      _c(
+        "MainLayout",
+        {
+          staticClass:
+            "flex flex-column items-center justify-center text-center p-4"
+        },
+        [
+          _c("div", [
+            _c("div", [_vm._v("Welcome to our Creed Wedding")]),
             _vm._v(" "),
-            _c("count-down", {
-              attrs: { id: "flipdown", deadline: "2023-03-11 11:00:00" }
-            })
-          ],
-          1
-        )
-      ])
+            _c("div", [_vm._v("We hope you can make it!")]),
+            _vm._v(" "),
+            _c("div", [_vm._v("Love from Jen and Stuart xx")])
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "mt-8" },
+            [
+              _c("div", { staticClass: "text-center" }, [_vm._v("Countdown")]),
+              _vm._v(" "),
+              _c("count-down", {
+                attrs: { id: "flipdown", deadline: "2023-03-11 11:00:00" }
+              })
+            ],
+            1
+          )
+        ]
+      )
     ],
     1
   )

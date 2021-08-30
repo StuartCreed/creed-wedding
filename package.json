@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "less-loader": "^10.0.1",
+    "uuidv4": "^6.2.12"
+  }
+}

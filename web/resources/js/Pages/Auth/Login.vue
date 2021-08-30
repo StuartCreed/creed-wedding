@@ -9,7 +9,7 @@
             </div>
 
             <div class="mt-4">
-                <jet-input id="password" style="font-size: 70px" class="mt-1 block w-full p-3 outline-none opacity-40 bg-blue-800 text-white" v-model="form.password" required autocomplete="current-password" />
+                <jet-input id="password" autofocus style="font-size: 70px" class="mt-1 block w-full p-3 outline-none opacity-40 bg-blue-800 text-white" v-model="form.password" autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">

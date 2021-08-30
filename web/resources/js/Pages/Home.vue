@@ -1,11 +1,14 @@
 <template>
     <div>
-        <MainLayout>
-            <div>Welcome to our Creed Wedding</div>
-            <div>We hope you can make it!</div>
-            <div>Love from Jen and Stuart xx</div>
+        <MainLayout class="flex flex-column items-center justify-center text-center p-4">
 
             <div>
+                <div>Welcome to our Creed Wedding</div>
+                <div>We hope you can make it!</div>
+                <div>Love from Jen and Stuart xx</div>
+            </div>
+
+            <div class="mt-8">
                 <div class="text-center">Countdown</div>
                 <count-down id='flipdown' deadline="2023-03-11 11:00:00"></count-down>
             </div>
