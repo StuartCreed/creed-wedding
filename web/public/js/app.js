@@ -5068,14 +5068,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Layouts_MainLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/MainLayout */ "./resources/js/Layouts/MainLayout.vue");
+/* harmony import */ var _Jetstream_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Jetstream/Button */ "./resources/js/Jetstream/Button.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
 //
 
+
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "SeatingPlan",
   components: {
+    Button: _Jetstream_Button__WEBPACK_IMPORTED_MODULE_1__.default,
     MainLayout: _Layouts_MainLayout__WEBPACK_IMPORTED_MODULE_0__.default
   }
 });
@@ -35974,7 +35987,37 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("MainLayout", [_vm._v("rsvp")])
+  return _c("MainLayout", [
+    _c("div", { staticClass: "mb-4" }, [_vm._v("please rsvp below:")]),
+    _vm._v(" "),
+    _c("form", [
+      _c("div", [
+        _c("label", [_vm._v("What song would get you on the dancefloor?")]),
+        _vm._v(" "),
+        _c("input", { staticClass: "p-2 m-4 rounded", attrs: { type: "text" } })
+      ]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass:
+            "bg-green-400 p-2 m-2 rounded focus:outline-none hover:bg-black text-white",
+          attrs: { type: "submit" }
+        },
+        [_vm._v("I am coming")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass:
+            "bg-red-400 p-2 m-2 rounded focus:outline-none hover:bg-black text-white",
+          attrs: { type: "submit" }
+        },
+        [_vm._v("I am not able to come")]
+      )
+    ])
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
