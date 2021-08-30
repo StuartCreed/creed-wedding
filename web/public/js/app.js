@@ -33073,7 +33073,7 @@ var render = function() {
   return _c(
     "div",
     {
-      staticClass: "font-handwriting flex flex-col",
+      staticClass: "font-handwriting flex flex-col text-center",
       staticStyle: { "font-size": "30px" }
     },
     [
@@ -34588,10 +34588,7 @@ var render = function() {
     [
       _c(
         "MainLayout",
-        {
-          staticClass:
-            "flex flex-column items-center justify-center text-center p-4"
-        },
+        { staticClass: "flex flex-column items-center justify-center p-4" },
         [
           _c("div", [
             _c("div", [_vm._v("Welcome to our Creed Wedding")]),

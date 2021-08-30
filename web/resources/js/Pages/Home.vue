@@ -1,6 +1,6 @@
 <template>
     <div>
-        <MainLayout class="flex flex-column items-center justify-center text-center p-4">
+        <MainLayout class="flex flex-column items-center justify-center p-4">
 
             <div>
                 <div>Welcome to our Creed Wedding</div>
