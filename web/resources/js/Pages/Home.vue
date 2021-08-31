@@ -1,11 +1,17 @@
 <template>
     <div>
-        <MainLayout class="flex flex-column items-center justify-center">
+        <MainLayout class="flex flex-column">
 
             <div>
                 <div>Welcome to our Creed Wedding</div>
                 <div>We hope you can make it!</div>
                 <div>Love from Jen and Stuart xx</div>
+            </div>
+
+            <div class="text-white m-6 flex justify-center items-center">
+                <inertia-link href="/rsvp" class="bg-gray-800 p-6 rounded ">
+                    rsvp here
+                </inertia-link>
             </div>
 
             <div class="mt-8">

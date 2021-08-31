@@ -4166,6 +4166,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
@@ -5068,7 +5074,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _Layouts_MainLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @/Layouts/MainLayout */ "./resources/js/Layouts/MainLayout.vue");
-/* harmony import */ var _Jetstream_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Jetstream/Button */ "./resources/js/Jetstream/Button.vue");
+/* harmony import */ var _Jetstream_Checkbox__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Jetstream/Checkbox */ "./resources/js/Jetstream/Checkbox.vue");
+/* harmony import */ var _Jetstream_Label__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Jetstream/Label */ "./resources/js/Jetstream/Label.vue");
 //
 //
 //
@@ -5083,13 +5090,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "SeatingPlan",
   components: {
-    Button: _Jetstream_Button__WEBPACK_IMPORTED_MODULE_1__.default,
+    Label: _Jetstream_Label__WEBPACK_IMPORTED_MODULE_2__.default,
+    Checkbox: _Jetstream_Checkbox__WEBPACK_IMPORTED_MODULE_1__.default,
     MainLayout: _Layouts_MainLayout__WEBPACK_IMPORTED_MODULE_0__.default
+  },
+  data: function data() {
+    return {
+      form: this.$inertia.form({
+        coming: true,
+        song: ''
+      })
+    };
   }
 });
 
@@ -30998,7 +31033,7 @@ var render = function() {
       _c(
         "inertia-link",
         { staticClass: "hover:text-black mr-4", attrs: { href: "/rsvp" } },
-        [_vm._v("\n        rspv\n    ")]
+        [_vm._v("\n        rsvp\n    ")]
       ),
       _vm._v(" "),
       _c(
@@ -34599,32 +34634,44 @@ var render = function() {
   return _c(
     "div",
     [
-      _c(
-        "MainLayout",
-        { staticClass: "flex flex-column items-center justify-center" },
-        [
-          _c("div", [
-            _c("div", [_vm._v("Welcome to our Creed Wedding")]),
-            _vm._v(" "),
-            _c("div", [_vm._v("We hope you can make it!")]),
-            _vm._v(" "),
-            _c("div", [_vm._v("Love from Jen and Stuart xx")])
-          ]),
+      _c("MainLayout", { staticClass: "flex flex-column" }, [
+        _c("div", [
+          _c("div", [_vm._v("Welcome to our Creed Wedding")]),
           _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "mt-8" },
-            [
-              _c("div", { staticClass: "text-center" }, [_vm._v("Countdown")]),
-              _vm._v(" "),
-              _c("count-down", {
-                attrs: { id: "flipdown", deadline: "2023-03-11 11:00:00" }
-              })
-            ],
-            1
-          )
-        ]
-      )
+          _c("div", [_vm._v("We hope you can make it!")]),
+          _vm._v(" "),
+          _c("div", [_vm._v("Love from Jen and Stuart xx")])
+        ]),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "text-white m-6 flex justify-center items-center" },
+          [
+            _c(
+              "inertia-link",
+              {
+                staticClass: "bg-gray-800 p-6 rounded ",
+                attrs: { href: "/rsvp" }
+              },
+              [_vm._v("\n                rsvp here\n            ")]
+            )
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "mt-8" },
+          [
+            _c("div", { staticClass: "text-center" }, [_vm._v("Countdown")]),
+            _vm._v(" "),
+            _c("count-down", {
+              attrs: { id: "flipdown", deadline: "2023-03-11 11:00:00" }
+            })
+          ],
+          1
+        )
+      ])
     ],
     1
   )
@@ -35990,32 +36037,65 @@ var render = function() {
   return _c("MainLayout", [
     _c("div", { staticClass: "mb-4" }, [_vm._v("please rsvp below:")]),
     _vm._v(" "),
-    _c("form", [
+    _c("form", { staticClass: "flex flex-col" }, [
       _c("div", [
-        _c("label", [_vm._v("What song would get you on the dancefloor?")]),
+        _c("label", { attrs: { for: "coming" } }, [_vm._v("I am coming")]),
         _vm._v(" "),
-        _c("input", { staticClass: "p-2 m-4 rounded", attrs: { type: "text" } })
+        _c("input", {
+          staticClass:
+            "p-2 m-2 rounded border border-black focus:outline-none hover:bg-green-500",
+          attrs: { id: "coming", value: "true", name: "rspv", type: "radio" }
+        }),
+        _vm._v(" "),
+        _c("label", { attrs: { for: "not-coming" } }, [
+          _vm._v("I am not able to come")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass:
+            "p-2 m-2 border border-black rounded focus:outline-none hover:bg-red-500",
+          attrs: {
+            checked: "checked",
+            id: "not-coming",
+            value: "false",
+            name: "rspv",
+            type: "radio"
+          }
+        })
       ]),
       _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass:
-            "bg-green-400 p-2 m-2 rounded focus:outline-none hover:bg-black text-white",
-          attrs: { type: "submit" }
-        },
-        [_vm._v("I am coming")]
-      ),
+      _c("div", [
+        _c("label", { attrs: { for: "song" } }, [
+          _vm._v("What song would get you on the dancefloor?")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "p-2 m-4 rounded w-64",
+          attrs: { id: "song", type: "text" }
+        })
+      ]),
       _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass:
-            "bg-red-400 p-2 m-2 rounded focus:outline-none hover:bg-black text-white",
-          attrs: { type: "submit" }
-        },
-        [_vm._v("I am not able to come")]
-      )
+      _c("div", [
+        _c("label", { attrs: { for: "dietary-requirements" } }, [
+          _vm._v("Do you have any dietary requirements?")
+        ]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "p-2 m-4 rounded w-64",
+          attrs: { id: "dietary-requirements", type: "text" }
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c(
+          "button",
+          {
+            staticClass:
+              "bg-gray-800 px-4 pt-4 pb-2 m-2 rounded focus:outline-none hover:bg-black text-white"
+          },
+          [_vm._v("\n                Submit\n            ")]
+        )
+      ])
     ])
   ])
 }

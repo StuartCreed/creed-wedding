@@ -4,7 +4,7 @@
             home
         </inertia-link>
         <inertia-link href="/rsvp" class="hover:text-black mr-4">
-            rspv
+            rsvp
         </inertia-link>
         <inertia-link href="/venue" class="hover:text-black mr-4">
             venue
