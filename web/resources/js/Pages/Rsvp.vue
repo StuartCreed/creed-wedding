@@ -22,7 +22,7 @@
                 <input id="dietary-requirements" class="p-2 m-4 rounded w-64" type="text" v-model="form.dietary"/>
             </div>
 
-            <confetti-button/>
+            <confetti-button />
 
         </form>
     </MainLayout>

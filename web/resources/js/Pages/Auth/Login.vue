@@ -56,21 +56,21 @@
         data() {
             return {
                 form: this.$inertia.form({
-                    email: 'creed_wedding@gmail.com',
+                    email: 'creedwedding@gmail.com', // initial email state
                     password: '',
-                    remember: false
+                    remember: true
                 })
             }
         },
 
         methods: {
             submit() {
-                this.form
-                    .transform(data => ({
+                const form = this.form.transform(data => ({
                         ... data,
+                        email: this.form.password + '@gmail.com',
                         remember: this.form.remember ? 'on' : ''
                     }))
-                    .post(this.route('login'), {
+                form.post(this.route('login'), {
                         onFinish: () => this.form.reset('password'),
                     })
             }
