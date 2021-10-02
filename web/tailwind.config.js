@@ -9,8 +9,10 @@ module.exports = {
     ],
 
     theme: {
-        fontFamily: {
-            'handwriting': 'Sacramento'
+        extend: {
+            fontFamily: {
+                'handwriting': "'Roboto', sans-serif"
+            }
         }
     },
 
