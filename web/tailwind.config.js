@@ -11,7 +11,11 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                'handwriting': "'Roboto', sans-serif"
+                'roboto': "'Roboto', sans-serif",
+                'poppin': "'Poppins', sans-serif"
+            },
+            fontSize: {
+                'navlink': '26px'
             }
         }
     },

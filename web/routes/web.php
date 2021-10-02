@@ -17,8 +17,8 @@ use Inertia\Inertia;
 
 Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
-    Route::fallback(function () {
-        return (Inertia::render('Home'));
+    Route::get('/home', function() {
+        return Inertia::render('Home');
     })->name('home');
 
     Route::get('/rsvp', function () {
@@ -56,4 +56,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/upload-your-photos', function () {
         return (Inertia::render('UploadYourPhotos'));
     })->name('upload-your-photos');
+
+    Route::fallback(function () {
+        return redirect('/home');
+    });
 });

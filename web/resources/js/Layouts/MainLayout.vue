@@ -1,5 +1,5 @@
 <template>
-    <div class="font-handwriting flex flex-col text-center" style="font-size: 30px">
+    <div class="flex flex-col text-center" style="font-size: 30px">
         <Nav></Nav>
         <div class="mt-16 p-6">
             <slot></slot>

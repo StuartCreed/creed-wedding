@@ -1,5 +1,5 @@
 <template>
-    <jet-authentication-card class="font-handwriting">
+    <jet-authentication-card class="font-roboto">
 
         <jet-validation-errors class="mb-4" />
 
@@ -9,7 +9,7 @@
             </div>
 
             <div class="mt-4">
-                <jet-input id="password" autofocus style="font-size: 70px" class="mt-1 block w-full p-3 outline-none opacity-40 bg-blue-800 text-white" v-model="form.password" autocomplete="current-password" />
+                <jet-input id="password" autofocus style="font-size: 70px" class="mt-1 block w-full p-3 outline-none opacity-50 bg-blue-800 text-white" v-model="form.password" autocomplete="current-password" />
             </div>
 
             <div class="block mt-4">

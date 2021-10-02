@@ -2,14 +2,21 @@
     <div>
         <MainLayout class="flex flex-column">
 
+            <div class="font-poppin font-bold my-6">
+                Date: 11th March 2023
+            </div>
+
             <div>
                 <div>Welcome to our Creed Wedding</div>
                 <div>We hope you can make it!</div>
                 <div>Love from Jen and Stuart xx</div>
             </div>
 
-            <div class="text-white m-6 flex justify-center items-center">
-                <inertia-link href="/rsvp" class="bg-gray-800 p-6 rounded ">
+            <div class="text-white my-8 flex justify-center items-center">
+                <inertia-link
+                    :href="route('rsvp')"
+                    class="bg-yellow-300 text-black p-6 rounded-full font-poppin hover:bg-green-700 hover:text-white"
+                >
                     rsvp here
                 </inertia-link>
             </div>
