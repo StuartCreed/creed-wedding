@@ -6,13 +6,14 @@
 
 <script>
 import SubmitButton from "@/Components/SubmitButton";
+import confetti from "canvas-confetti";
 
 export default {
     name: "ConfettiButton",
     components: {SubmitButton},
     methods: {
         submitform() {
-
+            confetti()
         },
     }
 }
