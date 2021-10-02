@@ -5206,6 +5206,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  props: {
+    existingRspv: Object
+  },
   components: {
     ConfettiButton: _Components_ConfettiButton__WEBPACK_IMPORTED_MODULE_3__.default,
     Label: _Jetstream_Label__WEBPACK_IMPORTED_MODULE_2__.default,
@@ -5215,9 +5218,9 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       form: this.$inertia.form({
-        coming: false,
-        song: '',
-        dietary: ''
+        coming: this.existingRspv ? this.existingRspv.coming : false,
+        song: this.existingRspv ? this.existingRspv.song : '',
+        dietary: this.existingRspv ? this.existingRspv.dietary : ''
       })
     };
   },
@@ -37067,11 +37070,11 @@ var render = function() {
             ],
             staticClass:
               "p-2 m-2 rounded border border-black focus:outline-none hover:bg-green-500",
-            attrs: { id: "coming", value: "true", name: "rspv", type: "radio" },
-            domProps: { checked: _vm._q(_vm.form.coming, "true") },
+            attrs: { id: "coming", value: "1", name: "rspv", type: "radio" },
+            domProps: { checked: _vm._q(_vm.form.coming, "1") },
             on: {
               change: function($event) {
-                return _vm.$set(_vm.form, "coming", "true")
+                return _vm.$set(_vm.form, "coming", "1")
               }
             }
           })
@@ -37095,14 +37098,14 @@ var render = function() {
               "p-2 m-2 border border-black rounded focus:outline-none hover:bg-red-500",
             attrs: {
               id: "not-coming",
-              value: "false",
+              value: "0",
               name: "rspv",
               type: "radio"
             },
-            domProps: { checked: _vm._q(_vm.form.coming, "false") },
+            domProps: { checked: _vm._q(_vm.form.coming, "0") },
             on: {
               change: function($event) {
-                return _vm.$set(_vm.form, "coming", "false")
+                return _vm.$set(_vm.form, "coming", "0")
               }
             }
           })

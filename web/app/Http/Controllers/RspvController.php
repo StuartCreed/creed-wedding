@@ -10,7 +10,10 @@ class RspvController extends Controller
 {
     public function index()
     {
-        return Inertia::render('Rsvp');
+        $existingRspv = Auth::user()->rspv()->orderByDesc('id')->get()->first();
+        return Inertia::render('Rsvp', [
+            'existingRspv' => $existingRspv
+        ]);
     }
 
     public function store(Request $request, Rspv $rspv) {
@@ -19,7 +22,7 @@ class RspvController extends Controller
         }
         $rspv->create([
             'user_id' => Auth::id(),
-            'coming' => (bool) $request->get('coming'),
+            'coming' => $request->get('coming'),
             'song' => $request->get('song'),
             'dietary' => $request->get('dietary')
         ]);
