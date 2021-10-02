@@ -45,9 +45,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return (Inertia::render('FoodAndDrinks'));
     })->name('food-and-drinks');
 
-    Route::get('/food-and-drinks/create', function () {
-        return (Inertia::render('FoodAndDrinksForm'));
-    })->name('food-and-drinks-create');
+    Route::get('/band', function () {
+        return (Inertia::render('Band'));
+    })->name('band');
 
     Route::post('/food-and-drinks', function () {
         return 'Food and drink stored!';

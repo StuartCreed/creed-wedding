@@ -1,11 +1,11 @@
 <template>
-    <MainLayout>music</MainLayout>
+    <MainLayout>band</MainLayout>
 </template>
 
 <script>
 import MainLayout from "@/Layouts/MainLayout";
 export default {
-    name: "Music",
+    name: "band",
     components: {MainLayout}
 }
 </script>

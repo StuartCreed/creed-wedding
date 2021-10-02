@@ -1,6 +1,6 @@
 <template>
     <MainLayout>
-        <div class="mb-4">please rsvp below:</div>
+        <div class="mb-4 font-poppin">Please RSVP below:</div>
         <form class="grid grid-cols-1 gap-2">
             <div class="py-2">
                 <label for="coming">I am coming</label>
@@ -22,11 +22,7 @@
                 <input id="dietary-requirements" class="p-2 m-4 rounded w-64" type="text"/>
             </div>
 
-            <div>
-                <button class="bg-gray-800 px-4 pt-4 pb-2 m-2 rounded focus:outline-none hover:bg-black text-white">
-                    Submit
-                </button>
-            </div>
+            <confetti-button/>
 
         </form>
     </MainLayout>
@@ -36,9 +32,10 @@
 import MainLayout from "@/Layouts/MainLayout";
 import Checkbox from "../Jetstream/Checkbox";
 import Label from "../Jetstream/Label";
+import ConfettiButton from "@/Components/ConfettiButton";
 export default {
     name: "SeatingPlan",
-    components: {Label, Checkbox, MainLayout},
+    components: {ConfettiButton, Label, Checkbox, MainLayout},
     data() {
         return {
             form: this.$inertia.form({

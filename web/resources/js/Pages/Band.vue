@@ -1,11 +1,11 @@
 <template>
-    <MainLayout>food and drinks form</MainLayout>
+    <MainLayout>Band</MainLayout>
 </template>
 
 <script>
 import MainLayout from "@/Layouts/MainLayout";
 export default {
-    name: "Food an drinks form",
+    name: "Band",
     components: {MainLayout}
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>upload your photos</MainLayout>
+    <MainLayout>Upload your photos feature coming nearer the time... </MainLayout>
 </template>
 
 <script>

@@ -7,8 +7,8 @@
         <nav-link routeName="on-the-day">on the day</nav-link>
         <nav-link routeName="seating-plan">seating plan</nav-link>
         <nav-link routeName="food-and-drinks">food and drinks</nav-link>
-        <nav-link routeName="food-and-drinks-create">music</nav-link>
-        <nav-link routeName="food-and-drinks-store">upload photos</nav-link>
+        <nav-link routeName="band">band</nav-link>
+        <nav-link routeName="upload-your-photos">upload photos</nav-link>
         <!--                <inertia-link :href="route('profile.show')" class="text-md text-gray-700 mr-4">-->
         <!--                    Profile-->
         <!--                </inertia-link>-->
