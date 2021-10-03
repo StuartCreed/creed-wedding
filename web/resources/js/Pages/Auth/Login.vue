@@ -70,7 +70,9 @@
                         email: this.form.password + '@gmail.com',
                         remember: this.form.remember ? 'on' : ''
                     }))
-                form.post(this.route('login'))
+                form.post(this.route('login'), {
+                        onFinish: () => location.reload(),
+                    })
 
             }
         }
