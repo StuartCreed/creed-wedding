@@ -4,6 +4,7 @@ use Illuminate\Foundation\Application;
 use App\Http\Controllers\RspvController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use \App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,11 +17,12 @@ use Inertia\Inertia;
 |
 */
 
-Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+Route::middleware(['auth:sanctum'])->group(function () {
+    Route::fallback(function () {
+        return redirect('/home');
+    });
 
-    Route::get('/home', function() {
-        return Inertia::render('Home');
-    })->name('home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 
     Route::get('/rsvp', [RspvController::class, 'index'])->name('rsvp');
     Route::post('/rsvp', [RspvController::class, 'store'])->name('rsvp.store');
@@ -57,7 +59,9 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
         return Inertia::render('UploadYourPhotos');
     })->name('upload-your-photos');
 
-    Route::fallback(function () {
-        return redirect('/home');
+    Route::middleware('can:admin')->group(function() {
+        Route::get('/admin', function() {
+            return Inertia::render('Admin/Home');
+        })->name('admin');
     });
 });

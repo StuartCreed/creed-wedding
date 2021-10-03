@@ -16,7 +16,9 @@ new Vue({
         h(InertiaApp, {
             props: {
                 initialPage: JSON.parse(app.dataset.page),
-                resolveComponent: (name) => require(`./Pages/${name}`).default,
+                resolveComponent: (name) => {
+                    return require(`./Pages/${name}`).default
+                }
             },
         }),
 }).$mount(app);
