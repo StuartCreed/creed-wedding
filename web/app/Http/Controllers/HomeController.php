@@ -11,7 +11,7 @@ class HomeController extends Controller
     public function index()
     {
         if (Auth::user()->is_admin) {
-            return Redirect::route('admin');
+            return Inertia::render('Admin/Home');
         }
 
         return Inertia::render('Home');

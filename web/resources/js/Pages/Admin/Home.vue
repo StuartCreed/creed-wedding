@@ -12,7 +12,7 @@
 
             <div class="mt-8">
                 <div class="text-center">Countdown</div>
-<!--                <count-down id='flipdown' deadline="2023-03-11 11:00:00"></count-down>-->
+                <count-down id='flipdown' deadline="2023-03-11 11:00:00"></count-down>
             </div>
         </AdminLayout>
     </div>
@@ -26,8 +26,8 @@ b {
 
 <script>
 import AdminLayout from "@/Layouts/AdminLayout";
-// import CountDown from '@/Components/Countdown';
+import CountDown from '@/Components/Countdown';
 export default {
-    components: {AdminLayout}
+    components: {AdminLayout, CountDown}
 }
 </script>

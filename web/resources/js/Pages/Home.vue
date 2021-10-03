@@ -23,7 +23,7 @@
 
             <div class="mt-8">
                 <div class="text-center">Countdown</div>
-<!--                <count-down id='flipdown' deadline="2023-03-11 11:00:00"></count-down>-->
+                <count-down id='flipdown' deadline="2023-03-11 11:00:00"></count-down>
             </div>
         </MainLayout>
     </div>
@@ -37,10 +37,10 @@
 
 <script>
     import MainLayout from "@/Layouts/MainLayout";
-    // import CountDown from '@/Components/Countdown';
+    import CountDown from '@/Components/Countdown';
     export default {
         name: "Home",
-        components: {MainLayout},
+        components: {MainLayout, CountDown},
         data() {
             return {
                 name: this.$page.props.user.name
