@@ -1,29 +1,20 @@
 <template>
     <div>
-        <MainLayout class="flex flex-column">
+        <AdminLayout class="flex flex-column">
 
             <div class="font-poppin font-bold my-6">
                 Date: 11th March 2023
             </div>
 
             <div class="text-red-600">
-                Admin page
-            </div>
-
-            <div class="text-white my-8 flex justify-center items-center">
-                <inertia-link
-                    :href="route('rsvp')"
-                    class="bg-yellow-300 text-black p-6 rounded-full font-poppin hover:bg-green-700 hover:text-white"
-                >
-                    rsvp here
-                </inertia-link>
+                Wedding Admin Home
             </div>
 
             <div class="mt-8">
                 <div class="text-center">Countdown</div>
                 <count-down id='flipdown' deadline="2023-03-11 11:00:00"></count-down>
             </div>
-        </MainLayout>
+        </AdminLayout>
     </div>
 </template>
 
@@ -34,9 +25,9 @@ b {
 </style>
 
 <script>
-import MainLayout from "@/Layouts/MainLayout";
+import AdminLayout from "@/Layouts/AdminLayout";
 import CountDown from '@/Components/Countdown';
 export default {
-    components: {MainLayout, CountDown}
+    components: {AdminLayout, CountDown}
 }
 </script>
