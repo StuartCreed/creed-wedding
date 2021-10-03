@@ -63,5 +63,9 @@ Route::middleware(['auth:sanctum'])->group(function () {
         Route::get('/admin', function() {
             return Inertia::render('Admin/Home');
         })->name('admin');
+
+        Route::get('/guests', function() {
+            return Inertia::render('Admin/Home');
+        })->name('guests');
     });
 });
