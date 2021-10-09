@@ -1,12 +1,12 @@
 <template>
     <div class="container flip-clock">
-        <template v-for="data in timeData" v-show="show">
-      <span v-bind:key="data.label" class="flip-clock__piece" :id="data.elementId" v-show="data.show">
+        <template v-for="data in timeData" v-show="show" :key="data.label">
+      <span class="flip-clock__piece" :id="data.elementId" v-show="data.show">
         <span class="flip-clock__card flip-card">
-          <b class="flip-card__top">{{ data.current | twoDigits }}</b>
-          <b class="flip-card__bottom" v-bind:data-value="data.current | twoDigits"></b>
-          <b class="flip-card__back" v-bind:data-value="data.previous | twoDigits"></b>
-          <b class="flip-card__back-bottom" v-bind:data-value="data.previous | twoDigits"></b>
+          <b class="flip-card__top">{{ current(data) }}</b>
+          <b class="flip-card__bottom" :data-value="current(data)"></b>
+          <b class="flip-card__back" :data-value="previous(data)"></b>
+          <b class="flip-card__back-bottom" :data-value="previous(data)"></b>
         </span>
         <span class="flip-clock__slot">{{ data.label }}</span>
       </span>
@@ -130,7 +130,7 @@ export default {
         },
         days() {
             return Math.trunc(this.diff / 60 / 60 / 24);
-        },
+        }
     },
     watch: {
         deadline: function(newVal, oldVal) {
@@ -156,15 +156,19 @@ export default {
             }
         },
     },
-    filters: {
-        twoDigits(value) {
+    methods: {
+        transformToTwoDigits(value) {
             if (value.toString().length <= 1) {
                 return '0' + value.toString();
             }
             return value.toString();
         },
-    },
-    methods: {
+        current(val) {
+            return this.transformToTwoDigits(val.current)
+        },
+        previous(val) {
+            return this.transformToTwoDigits(val.previous)
+        },
         updateAllCards() {
             this.updateTime(0, this.days);
             this.updateTime(1, this.hours);
