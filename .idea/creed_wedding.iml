@@ -126,6 +126,16 @@
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/tightenco/ziggy" />
       <excludeFolder url="file://$MODULE_DIR$/web/vendor/inertiajs/inertia-laravel" />
       <excludeFolder url="file://$MODULE_DIR$/web/public" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/pimple/pimple" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/symfony/stopwatch" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/spatie/ray" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/spatie/macroable" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/spatie/laravel-ray" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/spatie/backtrace" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/zbateson/mb-wrapper" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/zbateson/stream-decorators" />
+      <excludeFolder url="file://$MODULE_DIR$/web/vendor/zbateson/mail-mime-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/web/storage" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

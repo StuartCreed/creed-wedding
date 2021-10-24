@@ -11,6 +11,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Laravel\Fortify\Fortify;
+use App\Models\User;
+
 
 class FortifyServiceProvider extends ServiceProvider
 {
@@ -21,7 +23,6 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
     }
 
     /**

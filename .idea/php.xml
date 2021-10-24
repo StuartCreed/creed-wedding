@@ -119,6 +119,15 @@
       <path value="$PROJECT_DIR$/web/vendor/laravel/sanctum" />
       <path value="$PROJECT_DIR$/web/vendor/tightenco/ziggy" />
       <path value="$PROJECT_DIR$/web/vendor/inertiajs/inertia-laravel" />
+      <path value="$PROJECT_DIR$/web/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/web/vendor/symfony/stopwatch" />
+      <path value="$PROJECT_DIR$/web/vendor/spatie/ray" />
+      <path value="$PROJECT_DIR$/web/vendor/spatie/macroable" />
+      <path value="$PROJECT_DIR$/web/vendor/spatie/laravel-ray" />
+      <path value="$PROJECT_DIR$/web/vendor/spatie/backtrace" />
+      <path value="$PROJECT_DIR$/web/vendor/zbateson/mb-wrapper" />
+      <path value="$PROJECT_DIR$/web/vendor/zbateson/stream-decorators" />
+      <path value="$PROJECT_DIR$/web/vendor/zbateson/mail-mime-parser" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />

@@ -71,7 +71,7 @@
                         remember: this.form.remember ? 'on' : ''
                     }))
                 form.post(this.route('login'), {
-                        onFinish: () => location.reload(),
+                        // onFinish: () => location.reload(),
                     })
 
             }

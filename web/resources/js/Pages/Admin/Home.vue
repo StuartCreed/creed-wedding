@@ -18,12 +18,6 @@
     </div>
 </template>
 
-<style scoped>
-b {
-    color: white !important;
-}
-</style>
-
 <script>
 import AdminLayout from "@/Layouts/AdminLayout";
 import CountDown from '@/Components/Countdown';

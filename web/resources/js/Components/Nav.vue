@@ -14,7 +14,7 @@
         <!--                </inertia-link>-->
         <inertia-link
             :href="route('logout')" method="post" as="button" type="button"
-            class="bg-red-600 focus:outline-none py-1 px-4 rounded-full text-navlink hover:text-black hover:border-black"
+            class="bg-red-600 focus:outline-none mx-1 py-1 px-4 rounded-full text-navlink hover:text-black hover:border-black"
             style="line-height: 1.2"
         >
             logout
@@ -25,13 +25,8 @@
 <script>
 import NavLink from "./NavLink";
 export default {
-    name: "Nav.vue",
     components: {
         NavLink
     }
 }
 </script>
-
-<style scoped>
-
-</style>

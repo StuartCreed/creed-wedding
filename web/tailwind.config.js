@@ -15,7 +15,7 @@ module.exports = {
                 'poppin': "'Poppins', sans-serif"
             },
             fontSize: {
-                'navlink': '26px'
+                'navlink': '24px'
             }
         }
     },

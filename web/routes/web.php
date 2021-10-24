@@ -5,6 +5,7 @@ use App\Http\Controllers\RspvController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use \App\Http\Controllers\HomeController;
+use \App\Http\Controllers\GuestsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -64,8 +65,6 @@ Route::middleware(['auth:sanctum'])->group(function () {
             return Inertia::render('Admin/Home');
         })->name('admin');
 
-        Route::get('/guests', function() {
-            return Inertia::render('Admin/Home');
-        })->name('guests');
+        Route::resource('guests', GuestsController::class);
     });
 });
