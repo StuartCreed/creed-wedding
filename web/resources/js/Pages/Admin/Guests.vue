@@ -6,21 +6,21 @@
                 <span class="bg-black text-white rounded p-2" v-if="guestFormHidden">Add a guest</span>
                 <span class="bg-black text-white rounded p-2" v-else>Hide Me</span>
             </div>
-            <form class="p-2 flex flex-col" v-if="!guestFormHidden">
+            <form class="p-2 flex flex-col" v-show="!guestFormHidden">
 
                 <label class="p-2" for="first_name">
                     First Name:
-                    <form-input id="first_name" name="first_name" :value.sync="form.first_name"/>
+                    <input id="first_name" name="first_name" v-model="form.first_name"/>
                 </label>
 
                 <label class="p-2" for="second_name">
                     Second Name:
-                    <form-input id="second_name" name="second_name" :value.sync="form.second_name"/>
+                    <input id="second_name" name="second_name" v-model="form.second_name"/>
                 </label>
 
                 <label class="p-2 hidden" for="password">
                     Password:
-                    <form-input id="password" name="password"/>
+                    <input id="password" name="password"/>
                 </label>
 
                 <div>
@@ -49,6 +49,7 @@ import Button from "@/Jetstream/Button";
 import SubmitButton from "@/Components/SubmitButton";
 import Label from "@/Jetstream/Label";
 import FormInput from "@/Components/FormInput";
+import { Inertia } from '@inertiajs/inertia'
 export default {
     components: {Label, Button, Input, AdminLayout, SubmitButton, FormInput},
     props: {
@@ -71,8 +72,7 @@ export default {
                     name: this.form.first_name + ' ' + this.form.second_name,
                     password: this.form.first_name.toLowerCase() + this.form.second_name.toLowerCase(),
                     email: this.form.first_name.toLowerCase() + this.form.second_name.toLowerCase()
-                }))
-                this.form.post(route('guests.store'))
+                })).post(route('guests.store'))
             }
         },
         guestFormHiddenToggle() {

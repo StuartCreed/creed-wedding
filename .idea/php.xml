@@ -128,6 +128,7 @@
       <path value="$PROJECT_DIR$/web/vendor/zbateson/mb-wrapper" />
       <path value="$PROJECT_DIR$/web/vendor/zbateson/stream-decorators" />
       <path value="$PROJECT_DIR$/web/vendor/zbateson/mail-mime-parser" />
+      <path value="$PROJECT_DIR$/web/vendor/laravel/telescope" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
