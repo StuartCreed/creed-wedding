@@ -24,7 +24,11 @@
             </div>
 
             <div v-if="existingRspv && existingRspv.coming" class="p-4">
-                You have already RSVP'd, we are glad you can come!
+                <div class="py-2">You have already RSVP'd, we are glad you can come!</div>
+                <div class="text-gray-500">
+                    <div v-if="existingRspv.song">The song that would get you on the dancefloor: {{ existingRspv.song }}</div>
+                    <div v-if="existingRspv.dietary">Your dietary requirements: {{ existingRspv.dietary }}</div>
+                </div>
             </div>
 
             <div v-if="existingRspv && !existingRspv.coming" class="p-4">
