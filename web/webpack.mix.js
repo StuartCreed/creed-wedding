@@ -20,7 +20,7 @@ mix.js('resources/js/app.js', 'public/js').vue({
         require('autoprefixer'),
     ])
     .webpackConfig(require('./webpack.config'))
-    .browserSync('http://creed-wedding.docksal:8080/')
+    .browserSync('http://vue3practice.docksal/')
     .webpackConfig(webpack => {
         return {
             plugins: [
