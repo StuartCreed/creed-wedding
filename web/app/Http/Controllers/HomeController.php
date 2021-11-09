@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
 
 class HomeController extends Controller
@@ -14,6 +13,9 @@ class HomeController extends Controller
             return Inertia::render('Admin/Home');
         }
 
-        return Inertia::render('Home');
+        $existingRspv = Auth::user()->rspv()->orderByDesc('id')->get()->first();
+        return Inertia::render('Home', [
+            'existingRspv' => $existingRspv
+        ]);
     }
 }

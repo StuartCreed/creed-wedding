@@ -12,8 +12,8 @@ class CreateRspvsTable extends Migration
             $table->bigIncrements('id');
             $table->foreignId('user_id')->constrained();
             $table->boolean('coming');
-            $table->text('song');
-            $table->text('dietary');
+            $table->text('song')->nullable();
+            $table->text('dietary')->nullable();
             $table->timestamps();
         });
     }

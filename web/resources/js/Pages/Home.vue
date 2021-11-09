@@ -8,17 +8,27 @@
 
             <div>
                 <div>Welcome {{ name }} to our Creed Wedding</div>
-                <div>We hope you can make it!</div>
-                <div>Love from Jen and Stuart xx</div>
+                <div v-if="!existingRspv">
+                    <div>We hope you can make it!</div>
+                    <div>Love from Jen and Stuart xx</div>
+                </div>
             </div>
 
-            <div class="text-white my-8 flex justify-center items-center">
+            <div class="text-white my-8 flex justify-center items-center" v-if="!existingRspv">
                 <inertia-link
                     :href="route('rsvp')"
                     class="bg-yellow-300 text-black p-6 rounded-full font-poppin hover:bg-green-700 hover:text-white"
                 >
                     rsvp here
                 </inertia-link>
+            </div>
+
+            <div v-if="existingRspv && existingRspv.coming" class="p-4">
+                You have already RSVP'd, we are glad you can come!
+            </div>
+
+            <div v-if="existingRspv && !existingRspv.coming" class="p-4">
+                You have already RSVP'd, we are sorry you cannot make it.
             </div>
 
             <div class="mt-8">
@@ -41,6 +51,9 @@
     export default {
         name: "Home",
         components: {MainLayout, CountDown},
+        props: {
+            existingRspv: Object
+        },
         data() {
             return {
                 name: this.$page.props.user.name
